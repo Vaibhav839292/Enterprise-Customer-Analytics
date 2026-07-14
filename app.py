@@ -11,8 +11,6 @@ import streamlit as st
 import joblib
 import numpy as np
 
-# Model aur Scaler load karo
-# Make sure ye files GitHub repo ke main folder mein hain
 model = joblib.load('churn_model.pkl')
 scaler = joblib.load('scaler.pkl')
 
@@ -23,16 +21,16 @@ age = st.number_input("Age", 18, 100)
 balance = st.number_input("Balance", 0, 500000)
 
 if st.button("Predict"):
-    # Input data ko array mein convert karo
+    
     input_data = np.array([[age, balance]])
 
-    # Data scale karo
+  
     scaled_data = scaler.transform(input_data)
 
-    # Prediction karo
+   
     prediction = model.predict(scaled_data)
 
-    # Result show karo
+    
     if prediction[0] == 1:
         st.error("Customer is likely to CHURN!")
     else:
