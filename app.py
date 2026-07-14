@@ -4,37 +4,43 @@ import numpy as np
 import requests
 import os
 
-st.write("Checking files...")
+# Naye Google Drive Direct Links
+MODEL_URL = 'https://docs.google.com/uc?export=download&id=1SijgUq256_1fjz5ylxODdQyM6T138GMU'
+SCALER_URL = 'https://docs.google.com/uc?export=download&id=1hTOLjDhHtCRCdNYB4-ObCB78Ox0WvfeN'
 
-MODEL_URL = 'https://docs.google.com/uc?export=download&id=1_nqlIDoKTWsmEJPL6OwP5mnDOLZ3dwlf'
-SCALER_URL = 'https://docs.google.com/uc?export=download&id=17eH1mLEwnm5-ptDLuRp9EvqJo2KP5LVp'
-
+# File download function
 def download_file(url, filename):
-    st.write(f"Downloading {filename}...")
+    if os.path.exists(filename):
+        os.remove(filename)
+    
     response = requests.get(url, allow_redirects=True)
     with open(filename, 'wb') as f:
         f.write(response.content)
-    st.write(f"Done downloading {filename}")
 
-if not os.path.exists('churn_model.pkl'):
-    download_file(MODEL_URL, 'churn_model.pkl')
+# Files download karo
+download_file(MODEL_URL, 'churn_model.pkl')
+download_file(SCALER_URL, 'scaler.pkl')
 
-if not os.path.exists('scaler.pkl'):
-    download_file(SCALER_URL, 'scaler.pkl')
-
-st.write("Loading model...")
+# Model aur Scaler load karo
 model = joblib.load('churn_model.pkl')
 scaler = joblib.load('scaler.pkl')
-st.write("Model loaded successfully!")
 
 st.title("Bank Customer Churn Predictor")
+
+# Input fields
 age = st.number_input("Age", 18, 100)
 balance = st.number_input("Balance", 0, 500000)
 
 if st.button("Predict"):
+    # Input ko 2D array mein convert karo
     input_data = np.array([[age, balance]])
+    
+    # Scaling
     input_data_scaled = scaler.transform(input_data)
+    
+    # Prediction
     prediction = model.predict(input_data_scaled)
+    
     if prediction[0] == 1:
         st.write("Customer will Churn.")
     else:
