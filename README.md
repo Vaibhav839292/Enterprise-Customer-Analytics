@@ -1,19 +1,20 @@
-# 🏦 Enterprise Customer Churn Analytics & Prediction App
+# Enterprise Customer Churn Analytics & Prediction Platform
 
-An end-to-end Machine Learning web application built to predict bank customer churn. This project helps financial institutions identify customers who are likely to leave, enabling proactive retention strategies and data-driven business decisions.
-
-<p align="center">
-  <a href="https://enterprise-customer-analytics-vorrfvph4dpnnbutnuabok.streamlit.app" target="_blank">
-    <img src="https://img.shields.io/badge/🚀_View_Live_App-Streamlit-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live App">
-  </a>
-</p>
+## Executive Summary
+The Enterprise Customer Churn Analytics platform is an end-to-end machine learning application engineered to predict and analyze bank customer churn. By leveraging predictive modeling and behavioral analytics, this solution empowers financial institutions to proactively identify retention risks, optimize customer lifecycle management, and execute data-driven intervention strategies.
 
 ---
 
-## 🛠️ Tech Stack & Skills Used
+## Live Demonstration & Access
+* **Production Deployment:** [Access Live Streamlit Application](https://enterprise-customer-analytics-vorrfvph4dpnnbutnuabok.streamlit.app)
+
+---
+
+## Technical Architecture & Core Competencies
+The system integrates modern data science frameworks with a robust, production-grade cloud deployment architecture.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit">
   <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn">
   <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
@@ -24,56 +25,14 @@ An end-to-end Machine Learning web application built to predict bank customer ch
 
 ---
 
-## 📂 Project Directory Structure
-
+## Repository File Structure
 ```text
 Enterprise-Customer-Analytics/
 │
-├── app.py                      # Main Streamlit web application script
-├── Churn_Prediction_Project.ipynb # Jupyter Notebook containing EDA & Model Training
-├── Customer-Churn-Records.csv  # Raw dataset used for analysis and training
-├── churn_model_compressed.pkl  # Trained machine learning model weights
-├── scaler_compressed.pkl       # Feature scaling parameters for preprocessing
-└── requirements.txt            # Required Python packages for cloud deployment
-🚀 Key Features
-Real-Time Predictions: Instantly analyze customer behavior parameters to predict churn risk.
-
-Interactive Web Interface: Developed with Streamlit to offer a clean, responsive, and user-friendly control panel.
-
-Automated Data Preprocessing: Scales user inputs in real-time using pre-trained StandardScaler objects.
-
-Production-Ready Deployment: Hosted live on Streamlit Cloud for seamless accessibility from anywhere.
-
-⚙️ Local Setup and Installation
-If you want to clone and run this application locally on your machine, follow these steps:
-
-Clone the repository:
-
-Bash
-git clone [https://github.com/Vaibhav839292/Enterprise-Customer-Analytics.git](https://github.com/Vaibhav839292/Enterprise-Customer-Analytics.git)
-cd Enterprise-Customer-Analytics
-Install the dependencies:
-
-Bash
-pip install -r requirements.txt
-Run the application:
-
-Bash
-streamlit run app.py
-📈 Machine Learning Workflow
-Exploratory Data Analysis (EDA): Analyzed customer trends, financial records, and behavior metrics using Jupyter Notebook.
-
-Data Preprocessing & Scaling: Handled numerical normalization to ensure stable model performance.
-
-Model Training & Evaluation: Trained classification models via scikit-learn to maximize prediction accuracy.
-
-Model Serialization: Compressed and saved the trained components securely using joblib.
-
-Deployment: Integrated serialized assets into a web framework for real-time user interaction.
-
-👨‍💻 Author
-Vaibhav
-
-GitHub: @Vaibhav839292
-
+├── app.py                         # Core Streamlit web application interface
+├── Churn_Prediction_Project.ipynb # Exploratory Data Analysis & Model Training Pipeline
+├── Customer-Churn-Records.csv     # Historical enterprise dataset for analytics
+├── churn_model_compressed.pkl     # Serialized classification model weights
+├── scaler_compressed.pkl          # Standardized preprocessing feature parameters
+└── requirements.txt               # Dependency configuration for deployment environments
 
