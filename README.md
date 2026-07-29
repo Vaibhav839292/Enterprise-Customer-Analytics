@@ -35,3 +35,45 @@ Enterprise-Customer-Analytics/
 ├── churn_model_compressed.pkl  # Trained machine learning model weights
 ├── scaler_compressed.pkl       # Feature scaling parameters for preprocessing
 └── requirements.txt            # Required Python packages for cloud deployment
+🚀 Key Features
+Real-Time Predictions: Instantly analyze customer behavior parameters to predict churn risk.
+
+Interactive Web Interface: Developed with Streamlit to offer a clean, responsive, and user-friendly control panel.
+
+Automated Data Preprocessing: Scales user inputs in real-time using pre-trained StandardScaler objects.
+
+Production-Ready Deployment: Hosted live on Streamlit Cloud for seamless accessibility from anywhere.
+
+⚙️ Local Setup and Installation
+If you want to clone and run this application locally on your machine, follow these steps:
+
+Clone the repository:
+
+Bash
+git clone [https://github.com/Vaibhav839292/Enterprise-Customer-Analytics.git](https://github.com/Vaibhav839292/Enterprise-Customer-Analytics.git)
+cd Enterprise-Customer-Analytics
+Install the dependencies:
+
+Bash
+pip install -r requirements.txt
+Run the application:
+
+Bash
+streamlit run app.py
+📈 Machine Learning Workflow
+Exploratory Data Analysis (EDA): Analyzed customer trends, financial records, and behavior metrics using Jupyter Notebook.
+
+Data Preprocessing & Scaling: Handled numerical normalization to ensure stable model performance.
+
+Model Training & Evaluation: Trained classification models via scikit-learn to maximize prediction accuracy.
+
+Model Serialization: Compressed and saved the trained components securely using joblib.
+
+Deployment: Integrated serialized assets into a web framework for real-time user interaction.
+
+👨‍💻 Author
+Vaibhav
+
+GitHub: @Vaibhav839292
+
+
